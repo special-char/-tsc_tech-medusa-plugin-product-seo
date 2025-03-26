@@ -1,0 +1,8 @@
+/* Override styles for the ProgressAccordion from @medusajs/ui */
+.ProgressAccordion.Item[data-state="open"] .ProgressAccordion__Content {
+  display: block !important; /* Ensure content is visible when open */
+}
+
+.ProgressAccordion.Item[data-state="closed"] .ProgressAccordion__Content {
+  display: none !important; /* Hide content when closed */
+}
