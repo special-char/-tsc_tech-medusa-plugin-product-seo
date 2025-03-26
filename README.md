@@ -26,11 +26,9 @@
 This starter is compatible with versions >= 2.4.0 of `@medusajs/medusa`. 
 
 
+watch video for example
+
 https://github.com/user-attachments/assets/96007ce9-f9f4-44ec-aa2f-5fe355eb0ae4
-
-## Video Preview
-
-[![Video Preview](https://github.com/user-attachments/assets/96007ce9-f9f4-44ec-aa2f-5fe355eb0ae4)](https://github.com/user-attachments/assets/96007ce9-f9f4-44ec-aa2f-5fe355eb0ae4)
 
 
 ## Features
