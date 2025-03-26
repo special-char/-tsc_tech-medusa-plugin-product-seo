@@ -26,10 +26,7 @@
 This starter is compatible with versions >= 2.4.0 of `@medusajs/medusa`. 
 
 
-<video width="600" controls>
-<source src="seo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+https://github.com/user-attachments/assets/96007ce9-f9f4-44ec-aa2f-5fe355eb0ae4
 
 
 ## Features
