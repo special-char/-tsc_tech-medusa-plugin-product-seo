@@ -18,7 +18,6 @@ export async function GET(req: MedusaRequest, res: MedusaResponse) {
         id: req.params.productId,
       },
     });
-    console.log("hii");
 
     if (!data.at(0)?.seo_details) {
       return res.status(400).json({ message: "Product SEO not found" });

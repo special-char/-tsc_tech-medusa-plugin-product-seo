@@ -133,7 +133,6 @@ const SocialFieldArrayCard = ({
     name: `metaSocial.${index}.image`,
     control: control,
   });
-  console.log({ item });
 
   return (
     <ProgressAccordion.Item defaultValue={item.id} value={item.id}>

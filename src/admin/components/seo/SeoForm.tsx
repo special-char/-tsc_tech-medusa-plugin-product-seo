@@ -228,7 +228,6 @@ const SeoForm = ({ product, productSeo, type }: Props) => {
         });
       }
       if (typeof data.metaImage === "string" || !data.metaImage) {
-        console.log("deleted imagecanonical_URL", data.metaImage);
         formData.append("metaImage", data.metaImage ?? null);
       }
 

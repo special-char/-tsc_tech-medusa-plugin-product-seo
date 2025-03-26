@@ -29,11 +29,9 @@ export async function PUT(
 ) {
   try {
     const { metaSocial, ...rest } = req.body;
-    console.log("step 1", req.body);
 
     const productSeoService: ProductSeoModuleService =
       req.scope.resolve(PRODUCT_SEO_MODULE);
-    console.log("step 2");
     const files_input = req.files as Express.Multer.File[];
     const social_files = files_input?.filter((f) =>
       f.originalname.includes("metaSocial.image")
@@ -41,7 +39,6 @@ export async function PUT(
     const seo_files = files_input?.filter(
       (f) => !f.originalname.includes("metaSocial.image")
     );
-    console.log("step 3");
     let upload_result: FileDTO | null = null;
     if (seo_files?.length > 0) {
       const { result } = await uploadFilesWorkflow(req.scope).run({
@@ -60,16 +57,13 @@ export async function PUT(
         upload_result = result[0];
       }
     }
-    console.log("step 4");
     const data = await productSeoService.updateSeoDetails({
       id: req.params.id,
       ...rest,
       ...(upload_result?.url && { metaImage: upload_result?.url }),
     });
-    console.log("step 5");
     const socials =
       typeof metaSocial === "string" ? JSON.parse(metaSocial) : metaSocial;
-    console.log("metaSocial", metaSocial);
 
     if (socials && Array.isArray(socials) && socials.at(0)) {
       socials.forEach(async (item) => {
@@ -105,9 +99,7 @@ export async function PUT(
             });
           }
           if (item.isDeleted) {
-            console.log("DELETING:::::::::item.id", item.id, item);
             const response = await productSeoService.deleteSeoSocials(item.id);
-            console.log("DELETING:::::::::response", response);
             return;
           }
         } else {
@@ -143,11 +135,9 @@ export async function PUT(
         }
       });
     }
-    console.log("step 6");
     const newProductSeo = await productSeoService.retrieveSeoDetails(data.id, {
       relations: ["*", "metaSocial.*"],
     });
-    console.log("step 7");
     res.json({ data: newProductSeo });
   } catch (error) {
     res.status(500).json({ error: error });

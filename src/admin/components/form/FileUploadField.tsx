@@ -91,7 +91,6 @@ const FileUploadField: React.FC<FileUploadFieldProps> = ({
       setFileUploadError(true);
     }
   };
-  console.log({ value, selectedImage });
 
   return (
     <div className="flex items-center gap-8 h-[200px]">

@@ -47,7 +47,6 @@ export async function POST(
     const productSeoService: ProductSeoModuleService =
       req.scope.resolve(PRODUCT_SEO_MODULE);
     const { metaSocial, metaImage, ...rest } = req.body;
-    console.log("req.body", req.body);
 
     const socials =
       typeof metaSocial === "string" ? JSON.parse(metaSocial) : metaSocial;
@@ -61,7 +60,6 @@ export async function POST(
     // create social details with the json body provided
 
     const files_input = req.files as Express.Multer.File[];
-    console.log(files_input);
 
     const social_files = files_input.filter((f) =>
       f.originalname.includes("metaSocial.image")
