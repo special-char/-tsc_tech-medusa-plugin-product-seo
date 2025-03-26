@@ -1,6 +1,6 @@
 {
   "name": "@tsc_tech/medusa-plugin-product-seo",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A starter for Medusa plugins.",
   "author": "Medusa (https://medusajs.com)",
   "license": "MIT",
@@ -78,7 +78,9 @@
     "@mikro-orm/migrations": "6.4.3",
     "@mikro-orm/postgresql": "6.4.3",
     "awilix": "^8.0.1",
-    "pg": "^8.13.0"
+    "clsx": "^2.1.1",
+    "pg": "^8.13.0",
+    "react-hook-form": "^7.54.2"
   },
   "engines": {
     "node": ">=20"

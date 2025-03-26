@@ -28,6 +28,10 @@ This starter is compatible with versions >= 2.4.0 of `@medusajs/medusa`.
 
 https://github.com/user-attachments/assets/96007ce9-f9f4-44ec-aa2f-5fe355eb0ae4
 
+## Video Preview
+
+[![Video Preview](https://github.com/user-attachments/assets/96007ce9-f9f4-44ec-aa2f-5fe355eb0ae4)](https://github.com/user-attachments/assets/96007ce9-f9f4-44ec-aa2f-5fe355eb0ae4)
+
 
 ## Features
 
@@ -112,3 +116,5 @@ Once installed, you can manage SEO metadata from the Medusa admin panel. Navigat
 
 ## Community & Contributions
 The community and core team are available in GitHub Discussions, where you can ask for support, discuss the roadmap, and share ideas.
+
+
